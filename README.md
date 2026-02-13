@@ -4,9 +4,9 @@ Objetivo:   Desarrollar un sistema de carrito de compras en JavaScript que permi
 
 
 # Integrantes
-Gabriela Michelle Avendaño
-Jorge Alberto Diaz Duran 
-Kevin Antonio Flores Alvarado
-jeferson Alfredo Romero Rivas
-Oscar Daniel Diaz Hernandez
-Eliseo Garay Lopez
+* Gabriela Michelle Avendaño
+* Jorge Alberto Diaz Duran 
+* Kevin Antonio Flores Alvarado
+* jeferson Alfredo Romero Rivas
+* Oscar Daniel Diaz Hernandez
+* Eliseo Garay Lopez

@@ -2,23 +2,20 @@
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 const countProducts = document.querySelector('.count-products');
 
-/**
- * Actualiza el contador del carrito en el navbar
- */
+// Actualiza el contador del carrito en el navbar
+ 
 function actualizarContadorCarrito() {
     const totalProductos = carrito.reduce((sum, item) => sum + item.quantity, 0);
     countProducts.innerText = totalProductos;
 }
+// Renderiza dinámicamente la lista de productos con cantidad disponible e input
 
-/**
- * Renderiza dinámicamente la lista de productos con cantidad disponible e input
- */
 function renderizarProductos() {
-    const container = document.getElementById('products-container');
+    const container = document.getElementById('products-container'); // Busca el contairner con el id products-container en HTML de inicio
     container.innerHTML = '';
-
+    // se empiezan a recorrer los productos de array productos
     productos.forEach(producto => {
-        const card = document.createElement('div');
+        const card = document.createElement('div'); // se crea un div que contendra la informacion del producto
         card.classList.add('col-md-4', 'mb-4');
         
         card.innerHTML = `
@@ -41,17 +38,13 @@ function renderizarProductos() {
                 </div>
             </div>
         `;
-        
         container.appendChild(card);
     });
-
     agregarEventListeners();
 }
-
-    /**
-     * Abre el modal de detalle para un producto
-     * @param {string} productId
-     */
+ 
+// Abre el modal de detalle para un producto
+    
     function openProductModal(productId) {
         const producto = productos.find(p => p.id === productId);
         if (!producto) return;
@@ -246,3 +239,4 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarProductos();
     actualizarContadorCarrito();
 });
+

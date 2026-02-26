@@ -1,3 +1,5 @@
+// uso de constantes para mejor manejo de variables
+
 const cartItemsContainer = document.getElementById("cart-items");
 const totalPriceElement = document.getElementById("total-price");
 const subtotalPriceElement = document.getElementById("subtotal-price");
@@ -7,9 +9,8 @@ const countProducts = document.querySelector('.count-products');
 
 let carrito = [];
 
-/**
- * Carga el carrito desde localStorage
- */
+// Carga el carrito desde localStorage
+
 function loadCart() {
     const storedCart = localStorage.getItem("carrito");
     if (storedCart) {
@@ -19,17 +20,16 @@ function loadCart() {
     }
 }
 
-/**
- * Actualiza el contador de productos en el navbar
- */
+
+// Actualiza el contador de productos en el navbar
+ 
 function actualizarContadorCarrito() {
     const totalProductos = carrito.reduce((sum, item) => sum + item.quantity, 0);
     countProducts.innerText = totalProductos;
 }
 
-/**
- * Renderiza los productos en la página del carrito
- */
+// Renderiza los productos en la página del carrito
+ 
 function renderCart() {
     cartItemsContainer.innerHTML = "";
 
@@ -207,9 +207,9 @@ function actualizarInventario() {
     localStorage.setItem('inventario', JSON.stringify(productos));
 }
 
-/**
- * Genera una factura en PDF y la descarga
- */
+
+ // Genera una factura en PDF y la descarga
+ 
 function generarFacturaPDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -226,7 +226,7 @@ function generarFacturaPDF() {
     doc.setFillColor(237, 197, 178);
     doc.text("FACTURA", 20, 25);
 
-    // Número de Factura cualquiera a modo de ejemplo
+    // Número de Factura cualquiera a modo de ejemplo con la funcion math
     const numFactura = Math.floor(1000 + Math.random() * 9000);
 
     doc.setFontSize(12);
@@ -357,4 +357,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Evento del botón checkout
 checkoutButton.addEventListener("click", checkout);
+
 

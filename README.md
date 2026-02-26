@@ -12,8 +12,8 @@ El proyecto se puede descargar y abrir con un editor de codigo en local host ya 
 Se puede visualizar mediante el siguiente enlace de Github Pages: https://jorged99.github.io/Proyecto-de-Carrito-de-Compras2026/index.html 
 
 ## 🎗️ Integrantes
-Jorge Alberto Diaz Duran Carnet: **DD242312**
-Kevin Antonio Flores Alvarado Carnet: **FA251339**
-Oscar Daniel Diaz Hernandez Carnet: **DH252726**
-Gabriela Michelle Avendaño Cortez Carnet: **AC252532**
-Jeferson Alfredo Romero Rivas Carnet: **RR222321**
+*Jorge Alberto Diaz Duran Carnet: **DD242312** <br>
+*Kevin Antonio Flores Alvarado Carnet: **FA251339** <br>
+*Oscar Daniel Diaz Hernandez Carnet: **DH252726** <br>
+*Gabriela Michelle Avendaño Cortez Carnet: **AC252532** <br>
+*Jeferson Alfredo Romero Rivas Carnet: **RR222321** <br>

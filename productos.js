@@ -1,3 +1,4 @@
+// Se agregaron articulos en un array para simular el uso de una base de datos para los productos
 const productos = [
     {
         id: "1",
@@ -50,6 +51,7 @@ const productos = [
     },
     
 ];
+// Cada articulo tiene su propio valor que lo identifica y seleciona para mayor representacion
 
 // Depuración: confirma que la lista cargó correctamente
 console.log('productos cargados:', productos.length);

@@ -119,9 +119,9 @@ function renderizarProductos() {
         modal.show();
     }
 
-/**
- * Detecta cambios de cantidad para validar contra stock disponible
- */
+
+ // Detecta cambios de cantidad para validar contra stock disponible
+ 
 function agregarEventListeners() {
     const botonesAgregar = document.querySelectorAll('.add-to-cart');
     
@@ -156,10 +156,9 @@ function agregarEventListeners() {
     });
 }
 
-/**
- * Agrega producto al carrito con validaciones
- * @param {Event} e - Evento del click
- */
+ // Agrega producto al carrito con validaciones
+ // @param {Event} e - Evento del click
+ 
 function agregarAlCarrito(e) {
     const productId = this.dataset.productId;
     const producto = productos.find(p => p.id === productId);
@@ -239,4 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderizarProductos();
     actualizarContadorCarrito();
 });
+
 

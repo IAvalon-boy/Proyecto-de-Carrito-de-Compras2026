@@ -1,26 +1,20 @@
-/* =========================================
-   ========================================= */
 :root {
     --bg-dark: #0a0b10;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --neon-cyan: #00f2ff;
     --neon-purple: #7000ff;
     --neon-green: #00ff88;
-    --text-main: #ffffff; /* Blanco puro por defecto */
-    --text-muted: #b0b0b0;
+    --pure-white: #ffffff;
 }
 
-/* Base del sitio */
 body {
     background-color: var(--bg-dark) !important;
-    color: var(--text-main);
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--pure-white) !important;
+    font-family: 'Inter', sans-serif;
 }
 
-/* =========================================
-   ========================================= */
 .navbar {
-    background: rgba(10, 11, 16, 0.8) !important;
+    background: rgba(10, 11, 16, 0.9) !important;
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(0, 242, 255, 0.2);
 }
@@ -32,75 +26,62 @@ body {
     font-weight: 800 !important;
     text-transform: uppercase;
     letter-spacing: 2px;
-    filter: drop-shadow(0 0 5px rgba(0, 242, 255, 0.3));
 }
 
-/* =========================================
-   ========================================= */
 .card {
     background: var(--glass-bg) !important;
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     border-radius: 20px !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--neon-cyan) !important;
-    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
 }
 
-/* Títulos de productos en BLANCO */
-.card-title {
-    color: #ffffff !important;
-    font-size: 1.25rem !important;
+.card-title, 
+.card-body h5, 
+#products-container h5 {
+    color: #ffffff !important; 
+    font-size: 1.3rem !important;
     font-weight: 700 !important;
-    margin-top: 10px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
+    margin-bottom: 15px !important;
+    display: block !important;
 }
 
-/* Precios en VERDE NEÓN */
-.price, .card-body .text-success {
+.price, .text-success {
     color: var(--neon-green) !important;
     font-size: 1.2rem !important;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
-/* Textos secundarios (Stock, Cantidad) */
-.card-text, .form-label {
-    color: var(--text-muted) !important;
+.card-text, .stock-disponible, .form-label {
+    color: #e0e0e0 !important;
+    font-weight: 500;
 }
 
-.stock-disponible {
-    color: var(--neon-cyan) !important;
-    font-weight: bold;
-}
-
-/* =========================================
-
-   ========================================= */
-.btn-primary, .btn-info, .add-to-cart {
+.btn-primary, .add-to-cart {
     background: transparent !important;
     border: 2px solid var(--neon-cyan) !important;
     color: var(--neon-cyan) !important;
     border-radius: 50px !important;
     font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+    padding: 10px 20px;
 }
 
 .btn-primary:hover, .add-to-cart:hover {
     background: var(--neon-cyan) !important;
     color: #000 !important;
     box-shadow: 0 0 20px var(--neon-cyan);
-    transform: scale(1.05);
 }
 
-/* Estilo para los inputs de cantidad */
-.form-control {
+input.form-control {
     background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
     color: white !important;
-    border-radius: 10px;
+    text-align: center;
 }

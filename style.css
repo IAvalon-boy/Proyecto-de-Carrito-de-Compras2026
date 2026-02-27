@@ -1,0 +1,48 @@
+/* Paleta de colores: Oscuro profundo con acentos Neón */
+:root {
+    --bg-dark: #0a0b10;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #00f2ff;
+    --neon-purple: #7000ff;
+    --text-main: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif; /* Una fuente más moderna */
+}
+
+/* Efecto Glassmorphism para el Navbar y Cards */
+.navbar, .card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px); /* El efecto de vidrio empañado */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+/* Títulos con degradado futurista */
+h2, .navbar-brand {
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Botones con brillo neón */
+.btn-primary {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--neon-cyan);
+    color: #000;
+    box-shadow: 0 0 25px var(--neon-cyan);
+    transform: translateY(-2px);
+}
